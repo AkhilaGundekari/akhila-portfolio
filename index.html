@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akhila Gundekari | Portfolio</title>
+
+  <!-- 0) Google Fonts: Poppins (extra weights) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- 1) FONT AWESOME for GitHub / LinkedIn / Email icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+
+  <!-- 2) AOS (Animate On Scroll) CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+  />
+
+  <!-- 3) Your custom CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <!-- ===========================================
+       0) Full-screen tsParticles “connecting-dots” background
+       =========================================== -->
+  <div id="particles-bg"></div>
+
+  <!-- ===========================================
+       1) TOOLBAR (HEADER)
+       =========================================== -->
+  <header class="toolbar" data-aos="fade-down">
+    <nav class="nav-container">
+      <div class="logo">Akhila Gundekari</div>
+      <ul class="nav-links">
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#toolkit">My Toolkit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===========================================
+       2) HERO (Intro) Section
+       =========================================== -->
+  <section class="hero" id="hero" style="position: relative; overflow: hidden;">
+    <!-- 1) Very faint repeating “spatial pattern” behind everything -->
+    <div
+      class="grid-overlay"
+      style="
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        /* (actual background image or SVG is set via CSS below) */
+      "
+    ></div>
+
+    <!-- 2) Popping green “+”s and circles sit above the pattern -->
+    <div
+      class="decor-shapes"
+      style="
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+      "
+    >
+      <!-- ORIGINAL 6 -->
+      <span class="shape plus"   style="--i:0;  --x:15; --y:20;"></span>
+      <span class="shape plus"   style="--i:1;  --x:60; --y:10;"></span>
+      <span class="shape plus"   style="--i:2;  --x:30; --y:50;"></span>
+      <span class="shape circle" style="--i:3;  --x:45; --y:30;"></span>
+      <span class="shape circle" style="--i:4;  --x:75; --y:60;"></span>
+      <span class="shape circle" style="--i:5;  --x:20; --y:70;"></span>
+
+      <!-- ADDITIONAL 6 (i = 6–11) -->
+      <span class="shape plus"   style="--i:6;  --x:10;  --y:40;"></span>
+      <span class="shape plus"   style="--i:7;  --x:80;  --y:15;"></span>
+      <span class="shape plus"   style="--i:8;  --x:50;  --y:80;"></span>
+      <span class="shape circle" style="--i:9;  --x:25;  --y:25;"></span>
+      <span class="shape circle" style="--i:10; --x:90;  --y:50;"></span>
+      <span class="shape circle" style="--i:11; --x:40;  --y:90;"></span>
+
+      <!-- EVEN MORE 6 (i = 12–17) -->
+      <span class="shape plus"   style="--i:12; --x:5;   --y:10;"></span>
+      <span class="shape plus"   style="--i:13; --x:70;  --y:35;"></span>
+      <span class="shape plus"   style="--i:14; --x:35;  --y:65;"></span>
+      <span class="shape circle" style="--i:15; --x:55;  --y:20;"></span>
+      <span class="shape circle" style="--i:16; --x:20;  --y:85;"></span>
+      <span class="shape circle" style="--i:17; --x:85;  --y:75;"></span>
+    </div>
+
+    <!-- 3) Your hero content (text + image) sits in front -->
+    <div
+      class="hero-content"
+      style="
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      "
+    >
+      <!-- TEXT COLUMN -->
+      <div
+        class="hero-text"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        style="flex: 1 1 300px; max-width: 600px; margin-bottom: 2rem;"
+      >
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0;">
+          Hello,
+        </h1>
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin: 0; margin-top: 0.5rem;">
+          I'm Akhila ✨
+        </h2>
+
+       <p class="subheading">
+          Full Stack Engineer with 3+ years of experience building responsive, scalable, and accessible web apps. 
+          I specialize in React, Node.js, AWS, and UI/UX design — blending design and engineering to create intuitive digital experiences.
+        </p>
+        <p class="motto">Hakuna Matata 🕊️</p>
+
+        <div class="hero-buttons" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+          <a
+            class="btn"
+            href="assets/files/AkhilaGundekari_Resume.docx"
+            target="_blank"
+            style="
+              padding: 0.75rem 1.5rem;
+              background-color: #00E676;
+              color: #ffffff;
+              font-weight: 500;
+              border-radius: 9999px;
+              text-decoration: none;
+              transition: background-color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='#00c95a'"
+            onmouseout="this.style.backgroundColor='#00E676'"
+          >
+            Resume
+          </a>
+          <a
+            class="btn"
+            href="mailto:akhilagundekari4238@gmail.com"
+            style="
+              padding: 0.75rem 1.5rem;
+              border: 2px solid #00E676;
+              color: #00E676;
+              font-weight: 500;
+              border-radius: 9999px;
+              text-decoration: none;
+              transition: background-color 0.2s, color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='#00E676'; this.style.color='#ffffff';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00E676';"
+          >
+            Email Me
+          </a>
+        </div>
+
+        <div
+          class="hero-socials"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          style="margin-top: 2rem; display: flex; gap: 1.25rem; font-size: 1.25rem;"
+        >
+          <a
+            href="https://github.com/AkhilaGundekari"
+            target="_blank"
+            title="GitHub"
+            style="color: inherit; text-decoration: none; transition: color 0.2s;"
+            onmouseover="this.style.color='#00E676';"
+            onmouseout="this.style.color='inherit';"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/akhilagundekari01"
+            target="_blank"
+            title="LinkedIn"
+            style="color: inherit; text-decoration: none; transition: color 0.2s;"
+            onmouseover="this.style.color='#00E676';"
+            onmouseout="this.style.color='inherit';"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:akhilagundekari4238@gmail.com"
+            title="Email"
+            style="color: inherit; text-decoration: none; transition: color 0.2s;"
+            onmouseover="this.style.color='#00E676';"
+            onmouseout="this.style.color='inherit';"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div
+        class="hero-image"
+        data-aos="fade-left"
+        data-aos-delay="600"
+        style="flex: 1 1 300px; max-width: 400px; display: flex; justify-content: center;"
+      >
+        <img
+          src="images/profile.jpg"
+          alt="Akhila Gundekari"
+          style="
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 100%;
+            height: auto;
+          "
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       3) PROJECTS and Research SECTION
+       =========================================== -->
+  <section class="section" id="projects">
+  <div class="section-header" data-aos="zoom-in">
+    <h2>My Projects and Research</h2>
+  </div>
+  <div class="projects-grid">
+    <!-- Research -->
+    <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+      <img src="images/ai-chatbot.png" alt="" aria-hidden="true" />
+      <div class="project-overlay">
+        <h3>AI Chatbot & CAPTCHA Evasion Research</h3>
+        <p>
+          This research paper explores how CAPTCHA and reCAPTCHA are bypassed by sophisticated bots and fraudsters, 
+          affecting user experience and security. It discusses the evolution, limitations, and alternatives to these security measures.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/YourGitHubUsername/Project1" target="_blank">GitHub</a>
+          <a href="https://yourliveurl.com/project1" target="_blank">View Live</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secure Cloud File Sharing -->
+    <div class="project-card" data-aos="flip-right" data-aos-delay="200">
+      <img src="images/secure-cloud.png" alt="" aria-hidden="true" />
+      <div class="project-overlay">
+        <h3>Secure Cloud File Sharing Platform</h3>
+        <p>
+          Built an encrypted file-sharing system using AWS S3, Cognito, and IAM. Backend microservices deployed in Docker containers with audit logging and CI/CD pipelines.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/YourGitHubUsername/SecureCloud" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- University Login System -->
+    <div class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
+      <img src="images/university-login.png" alt="" aria-hidden="true" />
+      <div class="project-overlay">
+        <h3>University Login & Course Management</h3>
+        <p>
+          Developed a Firebase-authenticated portal for students and admins with RBAC, real-time course updates, and secure multi-user access. Delivered live demo and full documentation.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/YourGitHubUsername/UniversityPortal" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facial Recognition -->
+    <div class="project-card" data-aos="zoom-out" data-aos-delay="400">
+      <img src="images/highquality.png" alt="" aria-hidden="true" />
+      <div class="project-overlay">
+        <h3>High Quality Facial Recognition System</h3>
+        <p>
+          Real-time face recognition using OpenCV and deep learning. Modular detection and classification pipeline with a web-based frontend using HTML, CSS, and JS.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/AkhilaGundekari/SI-GuidedProject-5718-1634102369" target="_blank">GitHub</a>
+          <a href="#" target="_blank">View Live</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Captioning -->
+    <div class="project-card" data-aos="zoom-out" data-aos-delay="500">
+      <img src="images/show-and-tell.png" alt="" aria-hidden="true" />
+      <div class="project-overlay">
+        <h3>Show and Tell – Image Caption Generator</h3>
+        <p>
+          A Python-based tool using CNN + LSTM to generate descriptive captions for images. Trained with captioning datasets and IBM Watson to create meaningful text outputs.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/smartinternz02/SI-GuidedProject-6044-1634729025" target="_blank">GitHub</a>
+          <a href="#" target="_blank">View Live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+         
+
+  <!-- ===========================================
+       4) EXPERIENCE (Timeline) SECTION
+       =========================================== -->
+  <section class="section dark-bg" id="experience">
+  <div class="section-header" data-aos="fade-down">
+    <h2>Experience</h2>
+  </div>
+  <ul class="timeline">
+
+    <!-- Graduate Student Coordinator -->
+    <li data-aos="fade-up" data-aos-delay="100">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h3>Graduate Student Coordinator</h3>
+        <p class="subtext">Oklahoma City University · Oct 2023 – Sep 2024</p>
+        <ul>
+          <li>Built dashboards and microsites for campus events using Figma handoffs and full-stack deployment.</li>
+          <li>Developed React + Node.js apps with Firebase backend for 20+ event workflows.</li>
+          <li>Integrated Firebase Auth and Firestore for secure access and real-time updates.</li>
+          <li>Monitored deployments via Grafana; implemented analytics and feature toggles using Posthog.</li>
+          <li>Collaborated in Agile sprints using SAFe framework and GitHub for version control.</li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- UI/UX Developer -->
+    <li data-aos="fade-up" data-aos-delay="200">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h3>UI/UX Developer</h3>
+        <p class="subtext">EUT HUB Technologies · Jan 2021 – Jun 2023</p>
+        <ul>
+          <li>Engineered SPAs with React, Vue.js, and Tailwind CSS, reducing dev time by 25% via reusable components.</li>
+          <li>Built REST APIs with Node.js and Express, implementing JWT auth and secure backend logic.</li>
+          <li>Maintained CI/CD pipelines using Docker, GitHub Actions, and AWS deployments.</li>
+          <li>Enhanced reliability through unit testing (Jest) and API testing (Postman).</li>
+          <li>Collaborated with UX, QA, and DevOps to deliver scalable, pixel-perfect features.</li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- UI/UX Developer Intern -->
+    <li data-aos="fade-up" data-aos-delay="300">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h3>UI/UX Developer Intern</h3>
+        <p class="subtext">EUT HUB Technologies · May 2020 – Dec 2020</p>
+        <ul>
+          <li>Translated Figma and Adobe XD mockups into semantic, responsive HTML/CSS/JS code.</li>
+          <li>Supported frontend layout development and cross-browser QA testing.</li>
+          <li>Resolved IT issues across network/hardware/software layers and documented accessibility improvements.</li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+
+  <!-- ===========================================
+       5) TOOLKIT SECTION
+       =========================================== -->
+  <section class="section" id="toolkit">
+  <div class="section-header" data-aos="zoom-up">
+    <h2>My Toolkit</h2>
+  </div>
+  <div class="toolkit-grid">
+
+    <!-- Languages -->
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="100">
+      <i class="fa-brands fa-js"></i><span>JavaScript</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="110">
+      <i class="fa-brands fa-js"></i><span>TypeScript</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="120">
+      <i class="fa-brands fa-html5"></i><span>HTML5</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="130">
+      <i class="fa-brands fa-css3-alt"></i><span>CSS3</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="140">
+      <i class="fa-solid fa-code"></i><span>Python</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="150">
+      <i class="fa-solid fa-database"></i><span>SQL</span>
+    </div>
+
+    <!-- Frontend -->
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="200">
+      <i class="fa-brands fa-react"></i><span>React</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="210">
+      <i class="fa-brands fa-vuejs"></i><span>Vue.js</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="220">
+      <i class="fa-solid fa-forward"></i><span>Next.js</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="230">
+      <i class="fa-solid fa-wand-magic-sparkles"></i><span>Chakra UI</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="240">
+      <i class="fa-solid fa-paintbrush"></i><span>Tailwind CSS</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="250">
+      <i class="fa-solid fa-bolt"></i><span>Zustand</span>
+    </div>
+
+    <!-- Backend -->
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fa-brands fa-node-js"></i><span>Node.js</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="310">
+      <i class="fa-solid fa-link"></i><span>Express.js</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="320">
+      <i class="fa-brands fa-firefox-browser"></i><span>Firebase</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="330">
+      <i class="fa-solid fa-key"></i><span>JWT Auth</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="340">
+      <i class="fa-solid fa-database"></i><span>PostgreSQL</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="350">
+      <i class="fa-solid fa-leaf"></i><span>MongoDB</span>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="400">
+      <i class="fa-brands fa-aws"></i><span>AWS</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="410">
+      <i class="fa-brands fa-microsoft"></i><span>Azure</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="420">
+      <i class="fa-brands fa-docker"></i><span>Docker</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="430">
+      <i class="fa-brands fa-github"></i><span>GitHub</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="440">
+      <i class="fa-solid fa-arrows-rotate"></i><span>CI/CD</span>
+    </div>
+
+    <!-- Tools -->
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="500">
+      <i class="fa-brands fa-figma"></i><span>Figma</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="510">
+      <i class="fa-solid fa-adobe"></i><span>Adobe XD</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="520">
+      <i class="fa-solid fa-paper-plane"></i><span>Postman</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="530">
+      <i class="fa-solid fa-pen-nib"></i><span>Canva</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="540">
+      <i class="fa-brands fa-windows"></i><span>VS Code</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="550">
+      <i class="fa-solid fa-terminal"></i><span>IntelliJ</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="560">
+      <i class="fa-brands fa-jira"></i><span>Jira</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="570">
+      <i class="fa-brands fa-asana"></i><span>Asana</span>
+    </div>
+    <div class="tool-item" data-aos="zoom-in" data-aos-delay="580">
+      <i class="fa-brands fa-servicestack"></i><span>ServiceNow</span>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ===========================================
+       6) LET’S CONNECT SECTION
+       =========================================== -->
+  <section class="section dark-bg" id="contact">
+    <div class="section-header" data-aos="fade-down">
+      <h2>Let’s Connect! 💌</h2>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="100">
+      If you ever want to grab a coffee (virtually) or just want a quick
+      chat—you can find me on social media or send me a message right here:
+    </p>
+
+    <!-- Social Icons in Connect Section -->
+    <div class="contact-socials" data-aos="fade-up" data-aos-delay="200">
+      <a
+        href="https://github.com/AkhilaGundekari"
+        target="_blank"
+        title="GitHub"
+      >
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/akhilagundekari01"
+        target="_blank"
+        title="LinkedIn"
+      >
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="mailto:akhilagundekari4238@gmail.com" title="Email">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+    </div>
+
+    <!-- Contact form (adds extra top margin via CSS) -->
+    <form class="contact-form" data-aos="fade-up" data-aos-delay="300" action="#" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-row">
+        <textarea name="message" placeholder="Your message…" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section> 
+
+  <!-- ===========================================
+       7) FOOTER
+       =========================================== -->
+  <footer data-aos="fade-up" data-aos-delay="100">
+    <p>© 2025 Akhila Gundekari. All rights reserved.</p>
+  </footer>
+
+  <!-- ===========================================
+       8) JS INCLUDES (tsParticles & AOS)
+       =========================================== -->
+
+  <!-- tsParticles (draws connecting-dots in background) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Full-screen “connecting-dots” background
+      tsParticles.load("particles-bg", {
+        fullScreen: { enable: false },
+        detectRetina: true,
+        background: {
+          color: { value: "#121212" }, // same as page background
+        },
+        particles: {
+          number: { value: 80, density: { enable: true, area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.2 },
+          size: { value: { min: 1, max: 3 } },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#444444",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 0.4,
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: { default: "out" },
+          },
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: false },
+            onClick: { enable: false },
+          },
+        },
+      });
+
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({
+        once: true,
+        duration: 700,
+        offset: 100,
+      });
+    });
+  </script>
+</body>
+</html>
